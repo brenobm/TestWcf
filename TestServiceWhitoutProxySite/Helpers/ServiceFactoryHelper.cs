@@ -23,8 +23,7 @@ namespace TestServiceWhitoutProxySite.Helpers
         private string GetServiceAdress()
         {
             ServiceConfigurationSection config = (ServiceConfigurationSection)ConfigurationManager.GetSection("serviceConfigs/" + typeof(TServiceContract).Name);
-            return config.ServiceConfig.ServiceAddress;
-            
+            return config.ServiceAddress;
         }
     }
 }

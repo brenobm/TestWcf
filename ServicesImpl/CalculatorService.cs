@@ -12,7 +12,10 @@ namespace ServicesImpl
         public CalculatorDataContract ExecuteOperation(CalculatorDataContract data)
         {
             if (data == null)
-                throw new ArgumentNullException(nameof(data), $"The parameter ${nameof(data)} can't be null.");
+            {
+                //throw new ArgumentNullException(nameof(data), $"The parameter ${nameof(data)} can't be null.");
+                throw new ArgumentNullException("data", "The parameter \"data\" can't be null.");
+            }
 
             switch(data.Operation)
             {
