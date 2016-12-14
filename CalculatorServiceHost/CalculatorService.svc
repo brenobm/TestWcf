@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SerivcesImp.CalculatorService"  %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ServicesImpl.CalculatorService"  %>
