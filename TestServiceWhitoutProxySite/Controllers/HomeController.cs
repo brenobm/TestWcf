@@ -1,8 +1,10 @@
-﻿using System;
+﻿using ServicesContract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TestServiceWhitoutProxySite.Helpers;
 
 namespace TestServiceWhitoutProxySite.Controllers
 {
@@ -10,6 +12,19 @@ namespace TestServiceWhitoutProxySite.Controllers
     {
         public ActionResult Index()
         {
+            ServiceFactoryHelper<CalculatorServiceContract> serviceFactory = new ServiceFactoryHelper<CalculatorServiceContract>();
+
+            CalculatorServiceContract calculator = serviceFactory.GetService();
+
+            CalculatorDataContract data = new CalculatorDataContract();
+            data.Operation = OperationType.Addition;
+            data.ValueA = 10;
+            data.ValueB = 5;
+
+            CalculatorDataContract dataResult = calculator.ExecuteOperation(data);
+
+            ViewBag.Data = dataResult;
+
             return View();
         }
 
