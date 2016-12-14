@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestServiceWhitoutProxySite", "TestServiceWhitoutProxySite\TestServiceWhitoutProxySite.csproj", "{B6555383-4128-43A9-BFB5-506F46C810D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesContract", "ServicesContract\ServicesContract.csproj", "{ABB3FD94-8781-4BB0-A1BD-2F4C6AAA2E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesImpl", "ServicesImpl\ServicesImpl.csproj", "{7D9E808B-7EBB-4FCA-9024-A1457E4302FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorServiceHost", "CalculatorServiceHost\CalculatorServiceHost.csproj", "{F062B2A8-B2B5-4C12-87C1-28BE311A27CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6555383-4128-43A9-BFB5-506F46C810D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6555383-4128-43A9-BFB5-506F46C810D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6555383-4128-43A9-BFB5-506F46C810D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6555383-4128-43A9-BFB5-506F46C810D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB3FD94-8781-4BB0-A1BD-2F4C6AAA2E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB3FD94-8781-4BB0-A1BD-2F4C6AAA2E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB3FD94-8781-4BB0-A1BD-2F4C6AAA2E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB3FD94-8781-4BB0-A1BD-2F4C6AAA2E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9E808B-7EBB-4FCA-9024-A1457E4302FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9E808B-7EBB-4FCA-9024-A1457E4302FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9E808B-7EBB-4FCA-9024-A1457E4302FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9E808B-7EBB-4FCA-9024-A1457E4302FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F062B2A8-B2B5-4C12-87C1-28BE311A27CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F062B2A8-B2B5-4C12-87C1-28BE311A27CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F062B2A8-B2B5-4C12-87C1-28BE311A27CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F062B2A8-B2B5-4C12-87C1-28BE311A27CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
