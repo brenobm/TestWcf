@@ -8,7 +8,7 @@ using System.ServiceModel;
 namespace ServicesContract
 {
     [ServiceContract]
-    public interface CalculatorServiceContract
+    public interface ICalculatorService
     {
         [OperationContract]
         CalculatorDataContract ExecuteOperation(CalculatorDataContract data);

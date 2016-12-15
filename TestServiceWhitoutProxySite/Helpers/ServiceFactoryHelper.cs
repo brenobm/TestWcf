@@ -22,8 +22,18 @@ namespace TestServiceWhitoutProxySite.Helpers
 
         private string GetServiceAdress()
         {
-            ServiceConfigurationSection config = (ServiceConfigurationSection)ConfigurationManager.GetSection("serviceConfigs/" + typeof(TServiceContract).Name);
-            return config.ServiceAddress;
+            string url;
+            string serviceName;
+
+            serviceName = typeof(TServiceContract).Name;
+
+            ServiceConfigurationSection config = (ServiceConfigurationSection)ConfigurationManager.GetSection("serviceConfigs/Service");
+            
+            url = config.ServiceAddress;
+
+            url = string.Format("{0}/{1}.svc", url, serviceName.Substring(1, serviceName.Length - 1));
+
+            return url;
         }
     }
 }

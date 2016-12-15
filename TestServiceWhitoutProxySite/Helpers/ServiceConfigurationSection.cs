@@ -8,18 +8,7 @@ namespace TestServiceWhitoutProxySite.Helpers
 {
     public class ServiceConfigurationSection : ConfigurationSection
     {
-        //[ConfigurationProperty("serviceConfig")]
-        //public ServiceConfigurationElement ServiceConfig
-        //{
-        //    get
-        //    {
-        //        return (ServiceConfigurationElement)this["serviceConfig"];
-        //    }
-        //    set
-        //    {
-        //        this["serviceConfig"] = value;
-        //    }
-        //}
+
         [ConfigurationProperty("serviceName", IsRequired = true)]
         public string ServiceName
         {

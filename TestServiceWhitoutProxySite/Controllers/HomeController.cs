@@ -12,9 +12,9 @@ namespace TestServiceWhitoutProxySite.Controllers
     {
         public ActionResult Index()
         {
-            ServiceFactoryHelper<CalculatorServiceContract> serviceFactory = new ServiceFactoryHelper<CalculatorServiceContract>();
+            ServiceFactoryHelper<ICalculatorService> serviceFactory = new ServiceFactoryHelper<ICalculatorService>();
 
-            CalculatorServiceContract calculator = serviceFactory.GetService();
+            ICalculatorService calculator = serviceFactory.GetService();
 
             CalculatorDataContract data = new CalculatorDataContract();
             data.Operation = OperationType.Addition;
