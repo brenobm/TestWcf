@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculatorDataContract.cs" />
+    <Compile Include="IBookService.cs" />
     <Compile Include="ICalculatorService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
