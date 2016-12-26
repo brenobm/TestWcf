@@ -12,9 +12,7 @@ namespace TestServiceWhitoutProxySite.Controllers
     {
         public ActionResult Index()
         {
-            ServiceFactoryHelper<ICalculatorService> serviceFactory = new ServiceFactoryHelper<ICalculatorService>();
-
-            ICalculatorService calculator = serviceFactory.GetService();
+            ICalculatorService calculator = ServiceFactoryHelper<ICalculatorService>.GetService();
 
             CalculatorDataContract data = new CalculatorDataContract();
             data.Operation = OperationType.Addition;
@@ -23,7 +21,11 @@ namespace TestServiceWhitoutProxySite.Controllers
 
             CalculatorDataContract dataResult = calculator.ExecuteOperation(data);
 
+            IBookService book = ServiceFactoryHelper<IBookService>.GetService();
+
             ViewBag.Data = dataResult;
+            ViewBag.BookName = book.GetBookName(3);
+            ViewBag.AuthorName = book.GeBookAuthor(3);
 
             return View();
         }

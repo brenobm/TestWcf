@@ -12,9 +12,9 @@ using System.Web;
 
 namespace TestServiceWhitoutProxySite.Helpers
 {
-    public class ServiceFactoryHelper<TServiceContract>
+    public static class ServiceFactoryHelper<TServiceContract>
     {
-        public TServiceContract GetService()
+        public static TServiceContract GetService()
         {
             System.Net.ServicePointManager.ServerCertificateValidationCallback =
                 delegate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
@@ -61,7 +61,7 @@ namespace TestServiceWhitoutProxySite.Helpers
             return channel;
         }
 
-        private string GetServiceAdress()
+        private static string GetServiceAdress()
         {
             string url;
             string serviceName;
