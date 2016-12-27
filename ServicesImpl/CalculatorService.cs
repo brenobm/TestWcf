@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServicesImpl
 {
-    public class CalculatorService : ICalculatorService
+    public class CalculatorService : ServiceBase,  ICalculatorService
     {
         public CalculatorDataContract ExecuteOperation(CalculatorDataContract data)
         {

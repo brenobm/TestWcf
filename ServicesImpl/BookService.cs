@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServicesImpl
 {
-    public class BookService : IBookService
+    public class BookService : ServiceBase, IBookService
     {
         public string GeBookAuthor(int codeBook)
         {

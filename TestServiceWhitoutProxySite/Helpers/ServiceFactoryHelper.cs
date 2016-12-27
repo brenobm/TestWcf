@@ -15,48 +15,16 @@ namespace TestServiceWhitoutProxySite.Helpers
     public static class ServiceFactoryHelper<TServiceContract>
     {
         public static TServiceContract GetService()
-        {
-            System.Net.ServicePointManager.ServerCertificateValidationCallback =
-                delegate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
-                { return true; };
-
-
-            var store = new X509Store(StoreName.TrustedPeople, StoreLocation.LocalMachine);
-            store.Open(OpenFlags.ReadOnly);
-            var cert = store.Certificates.Find(X509FindType.FindBySubjectDistinguishedName, "CN=RootTestCertificateWCFClient", false)[0];
-            store.Close();
-
-            var endpointIdentity = EndpointIdentity.CreateX509CertificateIdentity(cert);
-            
+        {     
             ChannelFactory<TServiceContract> factory = null;
             WSHttpBinding binding = new WSHttpBinding();
-            
-            binding.Security.Mode = SecurityMode.Transport;
-            binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Certificate;
-            
-            
-            EndpointAddress address = new EndpointAddress(new Uri(GetServiceAdress()), endpointIdentity);
-            //EndpointAddress address = new EndpointAddress(new Uri(GetServiceAdress()));
-
-            //ClientCredentials.ClientCertificate.Certificate
+            CustomEndpointBehavior ceb = new CustomEndpointBehavior();
+         
+            EndpointAddress address = new EndpointAddress(new Uri(GetServiceAdress()));
 
             factory = new ChannelFactory<TServiceContract>(binding, address);
-            factory.Credentials.ClientCertificate.Certificate = cert;
-
-            //ClientCredentials credentials = new ClientCredentials();
-            ////credentials.ServiceCertificate.Authentication.CertificateValidationMode =
-            ////        X509CertificateValidationMode.None;
-
-            //factory.Endpoint.Behaviors.Remove<ClientCredentials>();
-            //factory.Endpoint.Behaviors.Add(credentials);
-
+            factory.Endpoint.EndpointBehaviors.Add(ceb);
             TServiceContract channel = factory.CreateChannel();
-
-            //ServicePointManager.ServerCertificateValidationCallback =
-            //        delegate(object s, X509Certificate certificate,
-            //                 X509Chain chain, SslPolicyErrors sslPolicyErrors)
-            //        { return true; };
-
             
             return channel;
         }
