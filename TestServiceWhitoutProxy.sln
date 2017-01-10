@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoHelper", "CryptoHelper\CryptoHelper.csproj", "{3598E09E-1697-4E41-8319-CF4FCC33D264}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost2", "ServiceHost2\ServiceHost2.csproj", "{38DA350C-C647-4EC1-A81F-60BD6C0FF388}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3598E09E-1697-4E41-8319-CF4FCC33D264}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3598E09E-1697-4E41-8319-CF4FCC33D264}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3598E09E-1697-4E41-8319-CF4FCC33D264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DA350C-C647-4EC1-A81F-60BD6C0FF388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DA350C-C647-4EC1-A81F-60BD6C0FF388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DA350C-C647-4EC1-A81F-60BD6C0FF388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DA350C-C647-4EC1-A81F-60BD6C0FF388}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

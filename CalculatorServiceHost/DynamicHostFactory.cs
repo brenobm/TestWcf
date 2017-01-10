@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServicesImpl.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -26,7 +27,7 @@ namespace CalculatorServiceHost
                 var attribute = (ServiceContractAttribute)
                 Attribute.GetCustomAttribute(contract, typeof(ServiceContractAttribute));
                 if (attribute != null)
-                    host.AddServiceEndpoint(contract, new WSHttpBinding(), "");
+                    host.AddServiceEndpoint(contract, new WSHttpBinding(), "").EndpointBehaviors.Add(new MyEndPointBehavior());
             }
             //// Add metdata behavior for generating wsdl
             //var metadata = new ServiceMetadataBehavior();

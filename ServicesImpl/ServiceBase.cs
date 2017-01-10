@@ -31,7 +31,7 @@ namespace ServicesImpl
 
             Token token = new Token();
 
-            if(!token.ValidateHash(authToken))
+            if (!token.ValidateHash(authToken))
             {
                 throw new UnauthorizedAccessException("Token de autenticação inválido.");
             }

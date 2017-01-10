@@ -31,7 +31,7 @@ namespace TestServiceWhitoutProxySite.Helpers
             Token token = new Token();
 
             property.Headers["AuthToken"] = token.GenerateHash();
-
+            property.Headers["IdTeste"] = "Teste123";
             return false;
         }
     }
